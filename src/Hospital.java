@@ -1,11 +1,12 @@
 import java.util.Queue;
 
 public class Hospital {
-    private int capacity;
+    public static int capacity;
+    public static int currentCapacity = 0;
     private Queue queue;
 
     public Hospital(int capacity, Queue queue) {
-        this.capacity = capacity;
+        Hospital.capacity = capacity;
         this.queue = queue;
     }
 
