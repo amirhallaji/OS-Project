@@ -1,25 +1,25 @@
 public class Patient {
     private String name;
-    private int duration;
+    private int entryTime;
 
-    public Patient(String name, int duration){
+    public Patient(String name, int entryTime){
         this.name = name;
-        this.duration = duration;
+        this.entryTime = entryTime;
     }
 
     public void setName(String name){
         this.name = name;
     }
 
-    public void setDuration(int duration){
-        this.duration = duration;
+    public void setEntryTime(int entryTime){
+        this.entryTime = entryTime;
     }
 
     public String getName(){
-        return this.name;
+        return name;
     }
 
-    public int getDuration() {
-        return duration;
+    public int getEntryTime() {
+        return entryTime;
     }
 }
