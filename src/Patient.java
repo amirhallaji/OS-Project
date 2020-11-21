@@ -3,10 +3,10 @@ public class Patient {
     private int entryTime;
     private MyThread myThread;
 
-    public Patient(String name, int entryTime, MyThread myThread){
+    public Patient(String name, int entryTime){
         this.name = name;
         this.entryTime = entryTime;
-        this.myThread = new MyThread();
+        Hospital.currentCapacity++;
     }
 
     public void setName(String name){
