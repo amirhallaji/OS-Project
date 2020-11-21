@@ -1,7 +1,6 @@
 public class Patient {
     private String name;
     private int entryTime;
-    private MyThread myThread;
 
     public Patient(String name, int entryTime){
         this.name = name;
@@ -25,7 +24,4 @@ public class Patient {
         return entryTime;
     }
 
-    public MyThread getMyThread() {
-        return myThread;
-    }
 }

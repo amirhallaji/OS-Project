@@ -34,7 +34,7 @@ public class Main {
                         @Override
                         public void run() {
                             if (Hospital.currentCapacity < Hospital.capacity) {
-                                patients[finalI].getMyThread().start();
+                                myThreads[finalI].start();
                             }
                         }
                     },
