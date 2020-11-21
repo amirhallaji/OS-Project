@@ -1,10 +1,12 @@
 public class Patient {
     private String name;
     private int entryTime;
+    private MyThread myThread;
 
-    public Patient(String name, int entryTime){
+    public Patient(String name, int entryTime, MyThread myThread){
         this.name = name;
         this.entryTime = entryTime;
+        this.myThread = new MyThread();
     }
 
     public void setName(String name){
@@ -21,5 +23,9 @@ public class Patient {
 
     public int getEntryTime() {
         return entryTime;
+    }
+
+    public MyThread getMyThread() {
+        return myThread;
     }
 }

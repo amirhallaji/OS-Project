@@ -12,16 +12,14 @@ public class Main {
 
         //Allocating the maximum number of semaphores
         Semaphore semaphore = new Semaphore(numDocs);
-
-        //We allocate an exclusive thread for each patient
-        //Suppose that 10 patients come to the hospital at different moments
-        Patient [] patients = new Patient[5]{
-                new Patient("p1",1000);
-                new Patient("p1",1000);
-                new Patient("p1",2000);
-                new Patient("p1",3000);
-                new Patient("p1",4000);
-        }
+        MyThread[] myThreads = new MyThread[5];
+        //Suppose that 5 patients come to the hospital at different moments
+        Patient[] patients = new Patient[5];
+        patients[0] = new Patient("p1", 1000, myThreads[0]);
+        patients[1] = new Patient("p2", 1000, myThreads[1]);
+        patients[2] = new Patient("p3", 2000, myThreads[2]);
+        patients[3] = new Patient("p4", 3000, myThreads[3]);
+        patients[4] = new Patient("p5", 4000, myThreads[4]);
 
         scan.close();
     }
