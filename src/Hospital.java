@@ -2,7 +2,7 @@ import java.util.Queue;
 
 public class Hospital {
     public static int capacity;
-    public static int currentCapacity = capacity;
+    public static int currentCapacity;
     private Queue queue;
 
     public Hospital(int capacity, Queue queue) {
