@@ -5,7 +5,9 @@ public class Patient {
     public Patient(String name, int entryTime){
         this.name = name;
         this.entryTime = entryTime;
-        Hospital.currentCapacity++;
+        if(Hospital.currentCapacity > 0){
+            Hospital.currentCapacity--;
+        }
     }
 
     public void setName(String name){
