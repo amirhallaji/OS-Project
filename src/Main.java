@@ -12,7 +12,7 @@ public class Main {
         numDocs = scan.nextInt();
 
         MyThread[] myThreads = new MyThread[19];
-        //Suppose that 5 patients come to the hospital at different moments
+        //Suppose that 19 patients come to the hospital at different moments
         Patient[] patients = new Patient[19];
         patients[0] = new Patient("p0", 0);
         patients[1] = new Patient("p1", 0);
