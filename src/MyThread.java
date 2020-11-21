@@ -16,6 +16,7 @@ public class MyThread extends Thread {
         try {
             System.out.println("Patient Name: " + patient.getName() + " is waiting for a doctor to visit.");
             Hospital.currentCapacity++;
+            //acquiring lock for a semaphore (doctor is busy)
             semaphore.acquire();
             System.out.println("Patient Name: " + patient.getName() + " just visited doctor");
             Thread.sleep(2000); //time for visiting doctor
@@ -24,8 +25,9 @@ public class MyThread extends Thread {
         } finally {
             timeFinish = System.currentTimeMillis();
             long duration = timeFinish - timeStarted;
-            System.out.println("Patient Name: " + patient.getName() + " left the hospital. Time is : " + (duration));
+            System.out.println("Patient Name: " + patient.getName() + " left the hospital. Time is : " + (duration / 1000));
             Hospital.currentCapacity--;
+            //releasing lock for a semaphore (doctor is free now)
             semaphore.release();
         }
 

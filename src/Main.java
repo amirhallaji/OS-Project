@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.concurrent.Semaphore;
 
 public class Main {
     static int numDocs;
@@ -25,7 +24,6 @@ public class Main {
         for (int i = 0; i < myThreads.length; i++) {
             myThreads[i] = new MyThread(patients[i]);
         }
-
 
         for (int i = 0; i < patients.length; i++) {
             int finalI = i;
