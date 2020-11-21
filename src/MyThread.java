@@ -10,7 +10,7 @@ public class MyThread extends Thread {
     public MyThread(Patient patient) {
         this.patient = patient;
     }
-    
+
     @Override
     public void run() {
         long timeStarted = System.currentTimeMillis();
@@ -19,8 +19,8 @@ public class MyThread extends Thread {
             //acquiring lock for a semaphore (doctor is busy)
             semaphore.acquire();
             System.out.println("Patient Name: " + patient.getName() + " just visited doctor");
-            Hospital.currentCapacity++; //when a patient enters a doctor room, number of patients waiting must be reduced by 1.
-            Thread.sleep(2000); //time for visiting doctor
+            Hospital.currentCapacity++; //whenever a patient enters a doctor room, number of patients waiting in the hall must be reduced by 1.
+            Thread.sleep(2000); //time needed for treatment
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {

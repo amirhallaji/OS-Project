@@ -16,9 +16,9 @@ public class Main {
         Patient[] patients = new Patient[5];
         patients[0] = new Patient("p1", 1000);
         patients[1] = new Patient("p2", 2000);
-        patients[2] = new Patient("p3", 1000);
-        patients[3] = new Patient("p4", 1000);
-        patients[4] = new Patient("p5", 1000);
+        patients[2] = new Patient("p3", 3000);
+        patients[3] = new Patient("p4", 4000);
+        patients[4] = new Patient("p5", 5000);
 
         for (int i = 0; i < myThreads.length; i++) {
             myThreads[i] = new MyThread(patients[i]);
