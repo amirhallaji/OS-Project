@@ -26,4 +26,8 @@ public class Patient {
         return entryTime;
     }
 
+    @Override
+    public String toString() {
+        return "Name: " + this.name + "  Entry time: " + this.entryTime;
+    }
 }

@@ -3,18 +3,19 @@ import java.util.concurrent.Semaphore;
 public class MyThread extends Thread {
     private final Patient patient;
 
+    //define a static semaphore, because it must be independent to object
+    //Allocating the maximum number of semaphores
+    static Semaphore semaphore = new Semaphore(Main.numDocs);
+
     public MyThread(Patient patient) {
         this.patient = patient;
     }
-
+    
     @Override
     public void run() {
         long timeStarted = System.currentTimeMillis();
         long timeFinish;
-        //Allocating the maximum number of semaphores
-        Semaphore semaphore = new Semaphore(Main.numDocs);
         try {
-//            System.out.println("Patient Name: " + patient.getName() + " is waiting for a doctor to visit.");
             //acquiring lock for a semaphore (doctor is busy)
             semaphore.acquire();
             System.out.println("Patient Name: " + patient.getName() + " just visited doctor");

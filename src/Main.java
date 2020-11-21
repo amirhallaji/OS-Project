@@ -15,7 +15,7 @@ public class Main {
         //Suppose that 5 patients come to the hospital at different moments
         Patient[] patients = new Patient[5];
         patients[0] = new Patient("p1", 1000);
-        patients[1] = new Patient("p2", 1000);
+        patients[1] = new Patient("p2", 2000);
         patients[2] = new Patient("p3", 1000);
         patients[3] = new Patient("p4", 1000);
         patients[4] = new Patient("p5", 1000);
@@ -32,6 +32,7 @@ public class Main {
                         public void run() {
                             if (Hospital.currentCapacity < Hospital.capacity) {
                                 System.out.println("Patient " + patients[finalI].getName() + " entered the hospital and is waiting for a doctor.");
+                                Hospital.currentCapacity--;
                                 myThreads[finalI].start();
                             } else {
                                 System.out.println("Patient " + patients[finalI] + " left the hospital, because there was no place to wait.");
