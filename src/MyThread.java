@@ -9,6 +9,8 @@ public class MyThread extends Thread {
 
     @Override
     public void run() {
+        long timeStarted = System.currentTimeMillis();
+        long timeFinish;
         //Allocating the maximum number of semaphores
         Semaphore semaphore = new Semaphore(Main.numDocs);
         try {
@@ -20,7 +22,9 @@ public class MyThread extends Thread {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            System.out.println("Patient Name: " + patient.getName() + " left the hospital");
+            timeFinish = System.currentTimeMillis();
+            long duration = timeFinish - timeStarted;
+            System.out.println("Patient Name: " + patient.getName() + " left the hospital. Time is : " + (duration));
             Hospital.currentCapacity--;
             semaphore.release();
         }
