@@ -1,28 +1,8 @@
-import java.util.Queue;
-
 public class Hospital {
     public static int capacity;
     public static int currentCapacity;
-    private Queue queue;
 
-    public Hospital(int capacity, Queue queue) {
+    public Hospital(int capacity) {
         Hospital.capacity = capacity;
-        this.queue = queue;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-
-    public void setQueue(Queue queue) {
-        this.queue = queue;
-    }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public Queue getQueue() {
-        return queue;
     }
 }

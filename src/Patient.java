@@ -7,14 +7,6 @@ public class Patient {
         this.entryTime = entryTime;
     }
 
-    public void setName(String name){
-        this.name = name;
-    }
-
-    public void setEntryTime(int entryTime){
-        this.entryTime = entryTime;
-    }
-
     public String getName(){
         return name;
     }
