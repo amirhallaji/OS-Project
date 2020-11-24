@@ -50,7 +50,7 @@ public class Main {
                         @Override
                         public void run() {
                             if (Hospital.currentCapacity > 0) {
-//                                System.out.println("Patient: " + patients[finalI].getName() + " entered the hospital and is waiting for a doctor.");
+                                System.out.println("Patient: " + patients[finalI].getName() + " entered the hospital and is waiting for a doctor.");
                                 Hospital.currentCapacity--;
                                 myThreads[finalI].start();
                             } else {

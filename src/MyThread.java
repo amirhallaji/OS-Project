@@ -22,18 +22,18 @@ public class MyThread extends Thread {
             semaphore.acquire();
             Main.patientToDoctor.put(patient,doctorNumber++);
             System.out.println("Patient: " + patient.getName() + " just visited Doctor " + (Main.patientToDoctor.get(patient)));
-            Hospital.currentCapacity++; //whenever a patient enters a doctor room, number of patients waiting in the hall must be reduced by 1.
-            Thread.sleep(2000); //time needed for treatment
+            Hospital.currentCapacity++; // whenever a patient enters a doctor room, number of patients waiting in the hall must be reduced by 1.
+            Thread.sleep(2000); // time needed for treatment
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
             timeFinish = System.currentTimeMillis();
             long duration = timeFinish - timeStarted + patient.getEntryTime();
             System.out.println("Patient: " + patient.getName() + " is done with the hospital. Time is : " + (duration / 1000));
+            //doctor is getting free now and patient is done.
             Main.patientToDoctor.remove(patient);
-            //doctor is getting free now.
             doctorNumber--;
-            //releasing lock for a semaphore (doctor is free now)
+            //releasing lock for a semaphore (doctor is free now).
             semaphore.release();
         }
 
