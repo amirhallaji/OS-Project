@@ -1,7 +1,9 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     static int numDocs;
+    static Boolean [] isDoctorBusy = new Boolean[Main.numDocs];
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -10,6 +12,8 @@ public class Main {
         Hospital.currentCapacity = Hospital.capacity;
         System.out.println("Please Enter the number of doctors (n)");
         numDocs = scan.nextInt();
+
+        Arrays.fill(isDoctorBusy, false);
 
         MyThread[] myThreads = new MyThread[19];
         //Suppose that 19 patients come to the hospital at different moments
