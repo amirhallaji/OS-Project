@@ -52,11 +52,11 @@ public class Main {
                         @Override
                         public void run() {
                             if (Hospital.currentCapacity > 0) {
-                                System.out.println("Patient " + patients[finalI].getName() + " entered the hospital and is waiting for a doctor.");
+//                                System.out.println("Patient: " + patients[finalI].getName() + " entered the hospital and is waiting for a doctor.");
                                 Hospital.currentCapacity--;
                                 myThreads[finalI].start();
                             } else {
-                                System.out.println("Patient " + patients[finalI] + " left the hospital, because there was no place to wait.");
+                                System.out.println("Patient: " + patients[finalI] + " left the hospital, because there was no place to wait.");
                             }
                         }
                     },

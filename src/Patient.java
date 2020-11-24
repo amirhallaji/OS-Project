@@ -17,6 +17,6 @@ public class Patient {
 
     @Override
     public String toString() {
-        return "Name: " + this.name + "  Entry time: " + this.entryTime;
+        return this.name + "  Entry time: " + this.entryTime;
     }
 }
