@@ -1,10 +1,8 @@
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     static int numDocs;
+    //for mapping each patient to a specific doctor
     static Map<Patient, Integer> patientToDoctor = new LinkedHashMap<>();
 
     public static void main(String[] args) {
@@ -17,7 +15,7 @@ public class Main {
 
 
         MyThread[] myThreads = new MyThread[21];
-        //Suppose that 19 patients come to the hospital at different moments
+        //Suppose that 21 patients come to the hospital at different moments
         Patient[] patients = new Patient[21];
         patients[0] = new Patient("p0", 1000);
         patients[1] = new Patient("p1", 1000);

@@ -6,6 +6,7 @@ public class MyThread extends Thread {
     //define a static semaphore, because it must be independent to object
     //Allocating the maximum number of semaphores
     static Semaphore semaphore = new Semaphore(Main.numDocs);
+    //doctor nth
     static int doctorNumber = 1;
 
     public MyThread(Patient patient) {
@@ -30,6 +31,7 @@ public class MyThread extends Thread {
             long duration = timeFinish - timeStarted + patient.getEntryTime();
             System.out.println("Patient: " + patient.getName() + " is done with the hospital. Time is : " + (duration / 1000));
             Main.patientToDoctor.remove(patient);
+            //doctor is getting free now.
             doctorNumber--;
             //releasing lock for a semaphore (doctor is free now)
             semaphore.release();
