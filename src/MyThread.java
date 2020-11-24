@@ -20,10 +20,8 @@ public class MyThread extends Thread {
             //acquiring lock for a semaphore (doctor is busy)
             semaphore.acquire();
             Main.patientToDoctor.put(patient,doctorNumber);
-            System.out.println("Patient Name: " + patient.getName() + " just visited Doctor " + (Main.patientToDoctor.get(patient)+1));
-            if(doctorNumber < Main.numDocs){
-                doctorNumber++;
-            }
+            System.out.println("Patient Name: " + patient.getName() + " just visited Doctor " + (Main.patientToDoctor.get(patient)));
+            doctorNumber++;
             Hospital.currentCapacity++; //whenever a patient enters a doctor room, number of patients waiting in the hall must be reduced by 1.
             Thread.sleep(2000); //time needed for treatment
         } catch (InterruptedException e) {
