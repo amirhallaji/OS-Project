@@ -6,6 +6,7 @@ public class MyThread extends Thread {
     //define a static semaphore, because it must be independent to object
     //Allocating the maximum number of semaphores
     static Semaphore semaphore = new Semaphore(Main.numDocs);
+    static int doctorNumber = 1;
 
     public MyThread(Patient patient) {
         this.patient = patient;
@@ -13,20 +14,16 @@ public class MyThread extends Thread {
 
     @Override
     public void run() {
-        int doctorNumber = 0;
         long timeStarted = System.currentTimeMillis();
         long timeFinish;
         try {
-            for (int i = 0; i < Main.isDoctorBusy.length; i++) {
-                if(!Main.isDoctorBusy[i]){
-                    Main.isDoctorBusy[i] = true;
-                    doctorNumber = i;
-                    break;
-                }
-            }
             //acquiring lock for a semaphore (doctor is busy)
             semaphore.acquire();
-            System.out.println("Patient Name: " + patient.getName() + " just visited Doctor " + (doctorNumber+1));
+            Main.patientToDoctor.put(patient,doctorNumber);
+            System.out.println("Patient Name: " + patient.getName() + " just visited Doctor " + (Main.patientToDoctor.get(patient)+1));
+            if(doctorNumber < Main.numDocs){
+                doctorNumber++;
+            }
             Hospital.currentCapacity++; //whenever a patient enters a doctor room, number of patients waiting in the hall must be reduced by 1.
             Thread.sleep(2000); //time needed for treatment
         } catch (InterruptedException e) {
@@ -35,7 +32,8 @@ public class MyThread extends Thread {
             timeFinish = System.currentTimeMillis();
             long duration = timeFinish - timeStarted + patient.getEntryTime();
             System.out.println("Patient Name: " + patient.getName() + " left the hospital. Time is : " + (duration / 1000));
-            Main.isDoctorBusy[doctorNumber] = false;
+            Main.patientToDoctor.remove(patient);
+            doctorNumber--;
             //releasing lock for a semaphore (doctor is free now)
             semaphore.release();
         }
