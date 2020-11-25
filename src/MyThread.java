@@ -7,7 +7,7 @@ public class MyThread extends Thread {
     //define a static semaphore, because it must be independent to object
     //Allocating the maximum number of semaphores
     static Semaphore doctorSemaphores = new Semaphore(Main.numDocs, true);
-    static Semaphore patientSemaphore = new Semaphore(1);
+    static Semaphore patientMutex = new Semaphore(1, true);
     //doctor nth
     static int doctorNumber = 1;
 
@@ -36,6 +36,7 @@ public class MyThread extends Thread {
                 Hospital.currentCapacity++; // whenever a patient enters a doctor room who has waited before, number of patients waiting in the hall must be reduced by 1.
             }
             Thread.sleep(2000); // time needed for treatment
+            patientMutex.acquire();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
@@ -45,6 +46,7 @@ public class MyThread extends Thread {
             //doctor is getting free now and patient is done.
             Main.patientToDoctor.remove(patient);
             doctorNumber--;
+            patientMutex.release();
             //releasing lock for a semaphore (doctor is free now).
             doctorSemaphores.release();
         }
