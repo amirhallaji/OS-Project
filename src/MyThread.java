@@ -20,7 +20,7 @@ public class MyThread extends Thread {
         long timeEntered;
         long timeFinish;
         try {
-            if (semaphore.availablePermits() == 0) {
+            if (semaphore.availablePermits() == 0 && Hospital.currentCapacity != 0) {
                 hasWaited = true;
                 Hospital.currentCapacity--;
                 System.out.println("Patient: " + patient.getName() + " is waiting for a doctor in time " + (double) (patient.getEntryTime()) / 1000);
