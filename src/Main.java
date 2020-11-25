@@ -48,10 +48,9 @@ public class Main {
             new java.util.Timer().schedule(
                     new java.util.TimerTask() {
                         @Override
-                        public synchronized void run() {
+                        public void run() {
                             if (Hospital.currentCapacity > 0) {
                                 Hospital.currentCapacity--;
-                                System.out.println("Patient: " + patients[finalI].getName() + " entered the hospital and is waiting for a doctor in time " + (double)(patients[finalI].getEntryTime())/1000);
                                 myThreads[finalI].start();
                             } else {
                                 System.out.println("Patient: " + patients[finalI] + " left the hospital, because there was no place to wait.");
