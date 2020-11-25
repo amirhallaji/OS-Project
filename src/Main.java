@@ -39,6 +39,7 @@ public class Main {
         patients[19] = new Patient("p19", 12000);
         patients[20] = new Patient("p20", 13000);
 
+
         for (int i = 0; i < myThreads.length; i++) {
             myThreads[i] = new MyThread(patients[i]);
         }
@@ -50,8 +51,8 @@ public class Main {
                         @Override
                         public void run() {
                             if (Hospital.currentCapacity > 0) {
-                                Hospital.currentCapacity--;
                                 myThreads[finalI].start();
+//                                Hospital.currentCapacity--;
                             } else {
                                 System.out.println("Patient: " + patients[finalI] + " left the hospital, because there was no place to wait.");
                             }
