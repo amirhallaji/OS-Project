@@ -4,9 +4,9 @@ public class Main {
     static int numDocs;
     //for mapping each patient to a specific doctor
     static Map<Patient, Integer> patientToDoctor = new LinkedHashMap<>();
-    //create a boolean array for doctors to see whether the doctor is busy or not
-    static boolean [] isDoctorBusy = new boolean[numDocs];
 
+    //create a boolean array for doctors to see whether the doctor is busy or not
+    static Boolean [] isDoctorBusy;
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Please Enter the capacity of the hospital (m)");
@@ -14,13 +14,8 @@ public class Main {
         Hospital.currentCapacity = Hospital.capacity;
         System.out.println("Please Enter the number of doctors (n)");
         numDocs = scan.nextInt();
-
-        for(int i = 0 ; i < isDoctorBusy.length; i++){
-            isDoctorBusy[i] = false;
-        }
-        for (int i = 0; i < isDoctorBusy.length; i++) {
-            System.out.print(isDoctorBusy[i] + "  ");
-        }
+        isDoctorBusy = new Boolean[numDocs];
+        Arrays.fill(isDoctorBusy, false);
 
         MyThread[] myThreads = new MyThread[21];
         //Suppose that 21 patients come to the hospital at different moments
