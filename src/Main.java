@@ -6,7 +6,8 @@ public class Main {
     static Map<Patient, Integer> patientToDoctor = new LinkedHashMap<>();
 
     //create a boolean array for doctors to see whether the doctor is busy or not
-    static Boolean [] isDoctorBusy;
+    static Boolean[] isDoctorBusy;
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Please Enter the capacity of the hospital (m)");

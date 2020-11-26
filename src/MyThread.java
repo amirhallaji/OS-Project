@@ -22,9 +22,7 @@ public class MyThread extends Thread {
         long timeEntered;
         long timeFinish;
         try {
-//            patientMutex.acquire();
-
-//            patientMutex.release();
+            patientMutex.acquire();
             if (doctorSemaphores.availablePermits() == 0 && Hospital.currentCapacity != 0) {
                 hasWaited = true;
                 Hospital.currentCapacity--;
@@ -40,6 +38,7 @@ public class MyThread extends Thread {
                     break;
                 }
             }
+            patientMutex.release();
             timeEntered = System.currentTimeMillis();
             double enteringDuration = timeEntered - timeStarted + patient.getEntryTime();
             System.out.println("Patient: " + patient.getName() + " visited Doctor " + (Main.patientToDoctor.get(patient) + 1) + " in time: " + (enteringDuration / 1000));
