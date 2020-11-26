@@ -7,10 +7,8 @@ public class MyThread extends Thread {
     //define a static semaphore, because it must be independent to object
     //Allocating the maximum number of semaphores
     static Semaphore doctorSemaphores = new Semaphore(Main.numDocs, true);
+    //defining a mutex for patient
     static Semaphore patientMutex = new Semaphore(1, true);
-    int doctorIndex = 1;
-    //doctor nth
-    static int doctorNumber = 1;
 
     public MyThread(Patient patient) {
         this.patient = patient;
@@ -28,7 +26,7 @@ public class MyThread extends Thread {
                 Hospital.currentCapacity--;
                 System.out.println("Patient: " + patient.getName() + " is waiting for a doctor in time " + (double) (patient.getEntryTime()) / 1000);
             }
-
+            patientMutex.release();
             //acquiring lock for a semaphore (doctor is busy)
             doctorSemaphores.acquire();
             for (int i = 0; i < Main.isDoctorBusy.length; i++) {
@@ -38,7 +36,6 @@ public class MyThread extends Thread {
                     break;
                 }
             }
-            patientMutex.release();
             timeEntered = System.currentTimeMillis();
             double enteringDuration = timeEntered - timeStarted + patient.getEntryTime();
             System.out.println("Patient: " + patient.getName() + " visited Doctor " + (Main.patientToDoctor.get(patient) + 1) + " in time: " + (enteringDuration / 1000));
@@ -52,6 +49,7 @@ public class MyThread extends Thread {
             timeFinish = System.currentTimeMillis();
             double duration = timeFinish - timeStarted + patient.getEntryTime();
             System.out.println("Patient: " + patient.getName() + " is done with the hospital. Time is : " + (duration / 1000));
+            //doctor index is turned to false, because he is free now.
             Main.isDoctorBusy[Main.patientToDoctor.get(patient)] = false;
             Main.patientToDoctor.remove(patient);
             //releasing lock for a semaphore (doctor is free now).
