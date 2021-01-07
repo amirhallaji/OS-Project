@@ -18,30 +18,30 @@ public class Main {
         isDoctorBusy = new Boolean[numDocs];
         Arrays.fill(isDoctorBusy, false);
 
-        MyThread[] myThreads = new MyThread[21];
+        MyThread[] myThreads = new MyThread[8];
         //Suppose that 21 patients come to the hospital at different moments
-        Patient[] patients = new Patient[21];
-        patients[0] = new Patient("p0", 1000);
-        patients[1] = new Patient("p1", 1000);
-        patients[2] = new Patient("p2", 1000);
-        patients[3] = new Patient("p3", 1000);
-        patients[4] = new Patient("p4", 1000);
-        patients[5] = new Patient("p5", 1000);
-        patients[6] = new Patient("p6", 1000);
-        patients[7] = new Patient("p7", 3000);
-        patients[8] = new Patient("p8", 3000);
-        patients[9] = new Patient("p9", 3000);
-        patients[10] = new Patient("p10", 3000);
-        patients[11] = new Patient("p11", 3000);
-        patients[12] = new Patient("p12", 3000);
-        patients[13] = new Patient("p13", 3000);
-        patients[14] = new Patient("p14", 5000);
-        patients[15] = new Patient("p15", 5000);
-        patients[16] = new Patient("p16", 9000);
-        patients[17] = new Patient("p17", 10000);
-        patients[18] = new Patient("p18", 11000);
-        patients[19] = new Patient("p19", 12000);
-        patients[20] = new Patient("p20", 13000);
+        Patient[] patients = new Patient[8];
+        patients[0] = new Patient("P1", 1000);
+        patients[1] = new Patient("P2", 1000);
+        patients[2] = new Patient("P3", 1000);
+        patients[3] = new Patient("P4", 1000);
+        patients[4] = new Patient("P5", 1000);
+        patients[5] = new Patient("P6", 3000);
+        patients[6] = new Patient("P7", 3000);
+        patients[7] = new Patient("P8", 10000);
+//        patients[8] = new Patient("p8", 3000);
+//        patients[9] = new Patient("p9", 3000);
+//        patients[10] = new Patient("p10", 3000);
+//        patients[11] = new Patient("p11", 3000);
+//        patients[12] = new Patient("p12", 3000);
+//        patients[13] = new Patient("p13", 3000);
+//        patients[14] = new Patient("p14", 5000);
+//        patients[15] = new Patient("p15", 5000);
+//        patients[16] = new Patient("p16", 9000);
+//        patients[17] = new Patient("p17", 10000);
+//        patients[18] = new Patient("p18", 11000);
+//        patients[19] = new Patient("p19", 12000);
+//        patients[20] = new Patient("p20", 13000);
 
 
         for (int i = 0; i < myThreads.length; i++) {
