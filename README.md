@@ -5,9 +5,7 @@ Main file for the project.
 main() method is here.
 
 **Patient.java**
-Each Patient has 2 Attributes
-1- name
-2- entry time
+Each Patient has 2 Attributes which is **name** and **Entry time**
 
 **MyThread.java**
 This class extends Thread and **Semaphore** is defined and used here.

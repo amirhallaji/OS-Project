@@ -21,9 +21,9 @@ public class MyThread extends Thread {
         long timeFinish;
         try {
             patientMutex.acquire();
-            if (doctorSemaphores.availablePermits() == 0 && Hospital.currentCapacity != 0) {
+            if (doctorSemaphores.availablePermits() == 0 && Main.currentCapacity != 0) {
                 hasWaited = true;
-                Hospital.currentCapacity--;
+                Main.currentCapacity--;
                 System.out.println("Patient: " + patient.getName() + " is waiting for a doctor in time " + (double) (patient.getEntryTime()) / 1000);
             }
             patientMutex.release();
@@ -40,7 +40,7 @@ public class MyThread extends Thread {
             double enteringDuration = timeEntered - timeStarted + patient.getEntryTime();
             System.out.println("Patient: " + patient.getName() + " visited Doctor " + (Main.patientToDoctor.get(patient) + 1) + " in time: " + (enteringDuration / 1000));
             if (hasWaited) {
-                Hospital.currentCapacity++; // whenever a patient enters a doctor room who has waited before, number of patients waiting in the hall must be reduced by 1.
+                Main.currentCapacity++; // whenever a patient enters a doctor room who has waited before, number of patients waiting in the hall must be reduced by 1.
             }
             Thread.sleep(2000); // time needed for treatment
         } catch (InterruptedException e) {
