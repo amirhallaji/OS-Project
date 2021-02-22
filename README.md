@@ -1,16 +1,13 @@
-[![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
 
-
-<h1 style="text-align:center">Operating Systems Project</h1>
-<h2 style="text-align:center">Fall 1399</h2>
+<h1 align="center">Operating Systems Project</h1>
+<h2 align="center">Fall 1399</h2>
 <p align="center">
     <img src="icons/header.jpg" width=700px>
 </p>
@@ -55,17 +52,14 @@ java Main
 
 - Touch [here](mailto://a.hallaji.b@gmail.com) to send an email to me.
 
+Project Link: [https://github.com/amirhallaji/OS-Project](https://github.com/amirhallaji/OS-Project)
 
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/amirhallaji/OS-Project/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/amirhallaji/OS-Project
 [forks-url]: https://github.com/amirhallaji/OS-Project/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/amirhallaji/OS-Project
 [stars-url]: https://github.com/amirhallaji/OS-Project/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/amirhallaji/OS-Project
 [issues-url]: https://github.com/amirhallaji/OS-Project/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/amirhallaji/OS-Project/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/amirhallaji
-[product-screenshot]: images/screenshot.png
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/amirhallaji/
