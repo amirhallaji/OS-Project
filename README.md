@@ -2,6 +2,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![WebSite][website-shield]](https://amirhallaji.com)
 
 
 
@@ -65,4 +66,5 @@ java Main
 [issues-url]: https://github.com/amirhallaji/OS-Project/issues
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/amirhallaji/
+[linkedin-url]: https://www.linkedin.com/in/amirhallaj
+[website-shield]: icons/amirhallaji.svg
