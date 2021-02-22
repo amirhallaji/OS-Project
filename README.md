@@ -1,11 +1,71 @@
-**This is the first project of operating systems lesson - Fall 1399**
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-**Main.java**
-Main file for the project.
-main() method is here.
 
-**Patient.java**
-Each Patient has 2 Attributes which is **name** and **Entry time**
 
-**MyThread.java**
-This class extends Thread and **Semaphore** is defined and used here.
+
+
+<h1 style="text-align:center">Operating Systems Project</h1>
+<h2 style="text-align:center">Fall 1399</h2>
+<p align="center">
+    <img src="icons/header.jpg" width=700px>
+</p>
+
+Table Of content
+- [Project Descicption](#project-descicption)
+- [Files and Directories](#files-and-directories)
+    - [Main.java](#mainjava)
+    - [MyThread.java](#mythreadjava)
+- [How to Run](#how-to-run)
+- [Contact](#contact)
+
+
+### Project Descicption
+
+The descicption of the project is brought in the file below.
+
+
+| Description 	| [![open](icons/3.svg)](Description/OS-Project1.pdf)|
+|:-:	|:-:	|
+
+### Files and Directories
+
+##### Main.java
+
+In this file, the threads are defined and the default example is set on **8** patients.
+
+##### MyThread.java
+
+The **run()** method is implemented in this file which descrbes the main architecture of the project.
+
+### How to Run
+
+Suppose you are in **src** directory. By using the command  below, you will run the project.
+
+```bash
+javac Main.java
+java Main
+```
+
+### Contact
+
+- Touch [here](mailto://a.hallaji.b@gmail.com) to send an email to me.
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-url]: https://github.com/amirhallaji/OS-Project/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-url]: https://github.com/amirhallaji/OS-Project/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-url]: https://github.com/amirhallaji/OS-Project/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-url]: https://github.com/amirhallaji/OS-Project/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/amirhallaji/OS-Project/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/amirhallaji
+[product-screenshot]: images/screenshot.png
