@@ -19,6 +19,7 @@ Table Of content
   - [MyThread.java](#mythreadjava)
 - [How to Run](#how-to-run)
 - [Contact](#contact)
+- [Project Link](#project-link)
 
 
 ### Project Descicption
@@ -50,7 +51,11 @@ java Main
 
 ### Contact
 
-- Touch [here](mailto://a.hallaji.b@gmail.com) to send an email to me.
+- Touch [here](mailto:a.hallaji.b@gmail.com) to send an email to me.
+  
+### Project Link
+
+- [Hospital Project](https://github.com/amirhallaji/OS-Project)
 
 [forks-shield]: https://img.shields.io/github/forks/amirhallaji/OS-Project
 [forks-url]: https://github.com/amirhallaji/OS-Project/network/members
