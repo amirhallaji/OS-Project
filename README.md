@@ -15,8 +15,8 @@
 Table Of content
 - [Project Descicption](#project-descicption)
 - [Files and Directories](#files-and-directories)
-    - [Main.java](#mainjava)
-    - [MyThread.java](#mythreadjava)
+  - [Main.java](#mainjava)
+  - [MyThread.java](#mythreadjava)
 - [How to Run](#how-to-run)
 - [Contact](#contact)
 
@@ -31,11 +31,11 @@ The descicption of the project is brought in the file below.
 
 ### Files and Directories
 
-##### Main.java
+#### Main.java
 
 In this file, the threads are defined and the default example is set on **8** patients.
 
-##### MyThread.java
+#### MyThread.java
 
 The **run()** method is implemented in this file which descrbes the main architecture of the project.
 
