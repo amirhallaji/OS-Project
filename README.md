@@ -52,8 +52,6 @@ java Main
 
 - Touch [here](mailto://a.hallaji.b@gmail.com) to send an email to me.
 
-Project Link: [https://github.com/amirhallaji/OS-Project](https://github.com/amirhallaji/OS-Project)
-
 [forks-shield]: https://img.shields.io/github/forks/amirhallaji/OS-Project
 [forks-url]: https://github.com/amirhallaji/OS-Project/network/members
 [stars-shield]: https://img.shields.io/github/stars/amirhallaji/OS-Project
